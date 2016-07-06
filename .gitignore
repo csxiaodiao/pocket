@@ -1,0 +1,6 @@
+.fuse_hidden*
+.DS_Store
+
+/.versions.conf
+/website_deploy
+
