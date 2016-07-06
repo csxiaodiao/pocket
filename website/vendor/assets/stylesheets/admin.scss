@@ -1,0 +1,20 @@
+/*
+ *= require devise_bootstrap_views
+
+ *= require_self
+*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "select2";
+@import "select2-bootstrap";
+
+.red {
+  color: red;
+}
+
+.form-horizontal .radio{
+    float: left;
+    margin-left: 30px;
+}

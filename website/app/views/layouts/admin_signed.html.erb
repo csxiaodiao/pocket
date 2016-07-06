@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>名汇商城</title>
+
+
+  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'admin', 'data-turbolinks-track' => true %>
+  <%= yield :scripts %>
+
+  <%= csrf_meta_tags %>
+
+</head>
+<body class="admin_container">
+
+  <%= render 'admin/shared/header_with_signed'%>
+
+  <div class='notifications top-right'></div>
+  <div class="admin_content col-md-offset-1 col-md-10">
+    <%= render 'admin/shared/flash' %>
+
+    <%= yield %>
+  </div>
+
+  <%=render "admin/shared/footer"%>
+</body>
+</html>

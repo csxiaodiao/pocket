@@ -1,0 +1,34 @@
+<div class="row sub-header">
+  <div class="col-md-10">
+    <h2>专辑标签</h2>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>名字</th>
+        <th>引用数</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tags.each do |tag|%>
+        <tr>
+          <td><%= tag.id %></td>
+          <td><%= tag.name %></td>
+          <td>12</td>
+          <td>
+          --------------
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <%= paginate @tags, theme: :bootstrap3 %>
+  </div>
+</div>
+

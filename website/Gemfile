@@ -1,0 +1,92 @@
+source 'https://gems.ruby-china.org'
+
+gem 'rails', '>= 5.0.0.rc1', '< 5.1'
+
+gem 'mysql2', '~> 0.4.3'
+
+gem 'puma', '~> 3.0', require: false
+
+gem 'sass-rails', '~> 5.0'
+
+gem 'uglifier', '>= 1.3.0'
+
+gem 'coffee-rails', '~> 4.1.0'
+
+gem 'jquery-rails'
+
+gem 'turbolinks', '~> 5.x'
+
+gem 'jbuilder', '~> 2.0'
+
+gem 'devise', '~> 4.0.0.rc2'
+gem 'devise-i18n', '~> 1.0.0'
+gem 'devise-bootstrap-views', '~> 0.0.8'
+
+gem 'bootstrap-sass', '~> 3.3.6'
+
+gem "select2-rails", '~> 4.0.1.1'
+
+gem 'switch_user', '~> 1.2.1'
+
+gem 'paranoia', github: 'rubysherpas/paranoia',
+                branch: 'core', ref: '9e0ec38e5f4d08d25c1bf1b63c1fe78208abe625'
+
+gem 'kaminari', github: 'amatsuda/kaminari',
+              branch: 'master', ref: '3974ae5f39ce31bfca28d17eccd8daf3ca263aa3'
+gem 'kaminari-i18n', '~> 0.3.2'
+
+gem 'arel-helpers', '~> 2.3.0'
+gem 'ransack', '~> 1.7.0'
+
+
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave',
+                  branch: 'master', ref: 'a2c93fe1a9d3a3f60d1662e5ec34fdba7bf2b304'
+
+gem 'aasm', '~> 4.9'
+
+gem 'enumerize', '~> 1.1'
+
+
+gem 'simple_form', '~> 3.2.1'
+gem "cocoon", '~> 1.2.9'
+
+gem 'default_value_for', github: 'matthewd/default_value_for',
+                   branch: 'master', ref: '604ab5e7cd799f293279115e490b039e64c609c4'
+
+gem 'closure_tree', github: 'jayfredlund/closure_tree',
+                    branch: 'master', ref: '9197ef9eedb5a8eabffa72d2557751ecde7c2ab5'
+
+gem "pundit", '~> 1.1.0'
+
+gem "omniauth", '~> 1.3.1'
+gem "omniauth-wechat-oauth2", github: 'vkill/omniauth-wechat-oauth2',
+                        branch: 'master', ref: 'b189e93942e8159ef7e14876b9d4bcf277dbd013'
+
+gem 'wechat', '~> 0.7.11'
+
+gem 'dotenv-rails', '~> 2.1.0'
+
+gem 'whenever', require: false
+
+
+group :development, :test do
+  gem 'rspec', '~> 3.5.0.beta2', require: false
+  gem 'rspec-rails', '~> 3.5.0.beta2', require: false
+  gem 'rspec-activejob', '~> 0.6.1', require: false
+  gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'factory_girl_rails', require: false
+  gem 'ffaker', require: false
+  gem 'database_cleaner', require: false
+  gem 'randumb', require: false
+end
+
+group :development do
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

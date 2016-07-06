@@ -1,0 +1,12 @@
+'zh-CN':
+  activerecord:
+    models:
+      admin: 管理员
+    attributes:
+      admin:
+        name: 名称
+        email: 邮箱
+        password: 密码
+        password_confirmation: 密码确认
+        current_password: 原始密码
+        remember_me: 记住我
