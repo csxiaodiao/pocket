@@ -12,28 +12,3 @@ emails.each do |email|
   end
 end
 
-
-puts 'create catgory'
-
-cate = Category.create!(
-    code: 'meinvtupian',
-    name: '美女图片',
-  )
-
-Category::DATA.each do |code, name|
-  category = Category.create!(
-    code: code,
-    name: name,
-    parent_id: cate.id
-    )
-  puts "> category #{category.name} created"
-end
-
-
-Tag::DATA.each do |name|
-  tag = Tag.create!(
-    name: name
-    )
-  puts "> tag #{tag.name} created"
-end
-
