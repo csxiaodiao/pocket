@@ -68,6 +68,23 @@ gem 'dotenv-rails', '~> 2.1.0'
 
 gem 'whenever', require: false
 
+gem 'redis', '~> 3.2.2'
+
+
+gem 'redis-actionpack', github: 'redis-store/redis-actionpack',
+                branch: 'master', ref: 'ff80a6f4d681eba097905176e1e75fab38d67e65'
+gem 'redis-rack', github: 'redis-store/redis-rack',
+                branch: 'master', ref: '83a7b7b895bb528c1ae88329e4bca09a97d9fbbf'
+gem 'redis-rails', github: 'redis-store/redis-rails',
+                branch: 'master', ref: 'bb9e202da4c9d9d4d927e4531f98e2db4e2dc657'
+
+gem 'sidekiq', '~> 4.1.1'
+gem 'sidekiq-limit_fetch', '~> 3.1.0'
+gem 'activejob-retry'
+
+gem 'redis-namespace', '~> 1.5.2'
+gem 'redis-objects', '~> 1.2.1'
+
 
 group :development, :test do
   gem 'rspec', '~> 3.5.0.beta2', require: false
