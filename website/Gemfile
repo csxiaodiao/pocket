@@ -86,7 +86,7 @@ gem 'redis-namespace', '~> 1.5.2'
 gem 'redis-objects', '~> 1.2.1'
 
 
-group :development, :test do
+group :development, :test, :staging do
   gem 'rspec', '~> 3.5.0.beta2', require: false
   gem 'rspec-rails', '~> 3.5.0.beta2', require: false
   gem 'rspec-activejob', '~> 0.6.1', require: false
