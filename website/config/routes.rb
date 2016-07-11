@@ -16,5 +16,9 @@ Rails.application.routes.draw do
     resources :tags
   end
 
+  scope module: :user do
+    root to: 'main#home'
+  end
+
 
 end
