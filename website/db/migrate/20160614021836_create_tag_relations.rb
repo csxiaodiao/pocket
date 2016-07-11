@@ -2,7 +2,6 @@ class CreateTagRelations < ActiveRecord::Migration[5.0]
   def change
     create_table :tag_relations do |t|
       t.references :tag, foreign_key: true
-      t.references :album, foreign_key: true
 
       t.datetime :deleted_at
 

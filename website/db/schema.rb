@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -30,20 +29,6 @@ ActiveRecord::Schema.define(version: 20160614021836) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "albums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "category_id"
-    t.string   "title"
-    t.string   "author"
-    t.decimal  "price",       precision: 10, scale: 2, default: "0.0"
-    t.boolean  "display",                              default: true
-    t.integer  "status"
-    t.datetime "deleted_at"
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
-    t.index ["category_id"], name: "index_albums_on_category_id", using: :btree
-    t.index ["deleted_at"], name: "index_albums_on_deleted_at", using: :btree
-  end
-
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "code"
@@ -62,23 +47,11 @@ ActiveRecord::Schema.define(version: 20160614021836) do
     t.index ["descendant_id"], name: "category_desc_idx", using: :btree
   end
 
-  create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "album_id"
-    t.string   "name"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["album_id"], name: "index_photos_on_album_id", using: :btree
-    t.index ["deleted_at"], name: "index_photos_on_deleted_at", using: :btree
-  end
-
   create_table "tag_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "tag_id"
-    t.integer  "album_id"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["album_id"], name: "index_tag_relations_on_album_id", using: :btree
     t.index ["deleted_at"], name: "index_tag_relations_on_deleted_at", using: :btree
     t.index ["tag_id"], name: "index_tag_relations_on_tag_id", using: :btree
   end
@@ -108,8 +81,5 @@ ActiveRecord::Schema.define(version: 20160614021836) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "albums", "categories"
-  add_foreign_key "photos", "albums"
-  add_foreign_key "tag_relations", "albums"
   add_foreign_key "tag_relations", "tags"
 end
