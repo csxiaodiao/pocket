@@ -1,0 +1,23 @@
+common: &common
+  name: 'pocket'
+  host: 'dev.pocket.com'
+  port: 3000
+  url: 'http://dev.pocket.com:3000'
+
+development:
+  <<: *common
+
+test:
+  <<: *common
+
+production:
+  <<: *common
+  host: 'www.pocket.com'
+  port: 80
+  url: 'http://www.pocket.com'
+
+staging:
+  <<: *common
+  host: 'stg.njxiaqi.com'
+  port: 80
+  url: 'http://stg.njxiaqi.com'
