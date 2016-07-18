@@ -14,4 +14,6 @@ Rails.application.config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.ico)
 Rails.application.config.assets.precompile += %w(
   admin.js
   admin.css
+  wx.css
+  wx.js
 )

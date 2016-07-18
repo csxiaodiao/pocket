@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>零钱大作战</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'wx', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'wx', 'data-turbolinks-track' => 'reload' %>
+</head>
+<body ontouchstart>
+  <%= yield %>
+</body>
+</html>

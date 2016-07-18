@@ -1,0 +1,26 @@
+default: &default
+  name: 'pocket'
+  name_code: "<%= ENV['WECHAT_NAME_CODE'] %>"
+  appid: "<%= ENV['WECHAT_APPID'] %>"
+  secret: "<%= ENV['WECHAT_SECRET'] %>"
+  token: "<%= ENV['WECHAT_TOKEN'] %>"
+  access_token: <%= File.expand_path('../tmp/sockets/wechat_access_token', __FILE__) %>
+  jsapi_ticket: <%= File.expand_path('../tmp/sockets/wechat_jsapi_ticket', __FILE__) %>
+  encrypt_mode: <%= ENV['WECHAT_ENCRYPT_MODE'] || false %>
+  encoding_aes_key: "<%= ENV['WECHAT_ENCRYPT_AES_KEY'] %>"
+
+development:
+  <<: *default
+  trusted_domain_fullname: "http://dev.pocket.com"
+
+test:
+  <<: *default
+  trusted_domain_fullname: "http://dev.pocket.com"
+
+production:
+  <<: *default
+  trusted_domain_fullname: "http://www.pocket.com"
+
+staging:
+  <<: *default
+  trusted_domain_fullname: "http://stg.njxiaqi.com"
