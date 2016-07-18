@@ -1,4 +1,4 @@
-class Wx::PocketController < ApplicationController
+class Wx::PocketsController < ApplicationController
   wechat_responder
 
   on :text do |request, content|
