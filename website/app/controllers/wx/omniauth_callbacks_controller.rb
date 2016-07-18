@@ -6,12 +6,12 @@ class Wx::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return redirect_to root_path, alert: '微信OAuth2.0登录失败！'
     end
 
-    @sns_user = SnsUser.find_or_create_from_auth_hash(
+    @user = User.find_or_create_from_auth_hash(
       auth_hash
     )
 
-    if @sns_user.persisted?
-      sign_in_and_redirect @sns_user, :event => :authentication
+    if @user.persisted?
+      sign_in_and_redirect @user, :event => :authentication
     else
       session["devise.wechat_data"] = auth_hash
       redirect_to root_path, alert: '微信OAuth2.0登录失败！'
